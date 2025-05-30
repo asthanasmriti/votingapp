@@ -1,42 +1,44 @@
-# Voting Application
+# 🗳️ Online Voting System - Java Swing App
 
-A simple Java-based Voting Application that connects to a MySQL database and allows user registration and vote tracking.
+This is a **colorful, animated Online Voting Application** built using **Java Swing** with **MySQL** database integration. It features:
+- Voter login with validation
+- Real-time voting for political parties
+- Party info chatbot
+- Restriction on multiple votes
+- Animations for a more interactive experience
 
-## 📁 Project Structure
+---
 
+## ✨ Features
 
-## ⚙️ Features
+### ✅ Voter Validation
+- Checks if the voter's name and ID are present in the database.
+- Rejects unregistered users with an error message.
 
-- Register a new voter with name, age, and vote status
-- Prevent duplicate voter registrations by ID
-- Display all registered voters
-- Connects to MySQL database using JDBC
+### 🗳️ Voting Functionality
+- Displays a list of 5 pre-defined political parties:
+  - BJP
+  - Congress
+  - AAP
+  - TMC
+  - Shiv Sena
+- User can vote for **only one** party.
+- After voting, the user **cannot vote again**.
 
-## 🛠️ Technologies Used
+### 🤖 AI ChatBot
+- Ask questions like: _"Why should I vote BJP?"_
+- The chatbot fetches party details like motto, leader, and achievements from the database.
 
-- Java (JDK 8+)
-- JDBC for database connectivity
-- MySQL (as the backend database)
+### 🎨 Beautiful & Colorful UI
+- Gradient background
+- Distinct button colors for each party
+- Animated welcome and thank-you screens
+- Custom confirmation dialogs
 
-## 🧰 Prerequisites
+### 🔐 Admin-Free, Voter-Oriented
+- No need for separate admin login — vote counts update automatically.
 
-- Java Development Kit (JDK) installed
-- MySQL server running
-- A database and table created with schema similar to:
+---
 
-```sql
-CREATE DATABASE votingdb;
+## 🧱 Project Structure
 
-USE votingdb;
-
-CREATE TABLE voters (
-    id INT PRIMARY KEY,
-    name VARCHAR(100),
-    age INT,
-    hasVoted BOOLEAN
-);
-String url = "jdbc:mysql://localhost:3306/votingdb";
-String user = "root";
-String password = "yourpassword";
-javac *.java
-java VotingApp
